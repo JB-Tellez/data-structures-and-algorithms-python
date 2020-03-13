@@ -18,4 +18,3 @@ def merge_lists(a, b):
         current_b = next_b
 
     return a
-
