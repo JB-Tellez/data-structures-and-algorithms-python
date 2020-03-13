@@ -98,4 +98,3 @@ def test_insert_after_missing():
 
     with pytest.raises(TargetError):
         linked_list.insert_after("radish", "zucchinni")
-
