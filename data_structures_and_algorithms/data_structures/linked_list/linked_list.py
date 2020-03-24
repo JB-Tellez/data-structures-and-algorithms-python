@@ -14,6 +14,10 @@ class-06:
         append
         insert_before
         insert_after
+
+class-07:
+    LinkedList -
+        kth_from_end
 """
 
 
