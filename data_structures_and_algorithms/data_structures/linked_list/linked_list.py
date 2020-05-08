@@ -59,15 +59,17 @@ class LinkedList:
         """returns linked list in stringy form
 
         Returns:
-            [string] -- e.g. ['apples'],['bananas'],
+            [string] -- e.g. '{ apples ] -> { bananas } -> NULL',
         """
         output = ""
 
         current = self.head
 
         while current:
-            output += f"[{current.value}],"
+            output += "{ " +  str(current.value) + " } -> "
             current = current.next
+
+        output += "NULL"
 
         return output
 

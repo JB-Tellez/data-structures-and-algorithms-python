@@ -9,7 +9,7 @@ from data_structures_and_algorithms.data_structures.linked_list.linked_list impo
 
 def test_reverse_none():
     ll = LinkedList()
-    expected = ""
+    expected = "NULL"
     flipped = reverse_linked_list(ll)
     actual = str(flipped)
     assert actual == expected
@@ -17,7 +17,7 @@ def test_reverse_none():
 
 def test_reverse_one():
     ll = LinkedList(["apple"])
-    expected = "[apple],"
+    expected = "{ apple } -> NULL"
     flipped = reverse_linked_list(ll)
     actual = str(flipped)
     assert actual == expected
@@ -25,7 +25,7 @@ def test_reverse_one():
 
 def test_reverse_three():
     ll = LinkedList(["apple", "banana", "cucumber"])
-    expected = "[cucumber],[banana],[apple],"
+    expected = "{ cucumber } -> { banana } -> { apple } -> NULL"
     flipped = reverse_linked_list(ll)
     actual = str(flipped)
     assert actual == expected

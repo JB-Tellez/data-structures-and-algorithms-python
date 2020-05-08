@@ -9,15 +9,15 @@ from data_structures_and_algorithms.data_structures.linked_list.linked_list impo
 def test_insert():
     linked_list = LinkedList()
 
-    assert str(linked_list) == ""
+    assert str(linked_list) == "NULL"
 
     linked_list.insert("apple")
 
-    assert str(linked_list) == "[apple],"
+    assert str(linked_list) == "{ apple } -> NULL"
 
     linked_list.insert("banana")
 
-    assert str(linked_list) == "[banana],[apple],"
+    assert str(linked_list) == "{ banana } -> { apple } -> NULL"
 
 
 def test_includes():
@@ -41,7 +41,7 @@ def test_append():
 
     linked_list.append("cucumber")
 
-    assert str(linked_list) == "[banana],[apple],[cucumber],"
+    assert str(linked_list) == "{ banana } -> { apple } -> { cucumber } -> NULL"
 
 
 def test_insert_before():
@@ -53,7 +53,7 @@ def test_insert_before():
 
     linked_list.insert_before("apple", "cucumber")
 
-    assert str(linked_list) == "[banana],[cucumber],[apple],"
+    assert str(linked_list) == "{ banana } -> { cucumber } -> { apple } -> NULL"
 
 
 def test_insert_after():
@@ -65,7 +65,7 @@ def test_insert_after():
 
     linked_list.insert_after("banana", "cucumber")
 
-    assert str(linked_list) == "[banana],[cucumber],[apple],"
+    assert str(linked_list) == "{ banana } -> { cucumber } -> { apple } -> NULL"
 
 
 def test_insert_before_empty():
