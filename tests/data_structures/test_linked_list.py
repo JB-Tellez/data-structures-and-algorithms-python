@@ -5,6 +5,10 @@ from data_structures_and_algorithms.data_structures.linked_list.linked_list impo
     TargetError,
 )
 
+def test_insert_none():
+    linked_list = LinkedList()
+    linked_list.insert(None)
+    assert str(linked_list) == "{ None } -> NULL"
 
 def test_insert():
     linked_list = LinkedList()
